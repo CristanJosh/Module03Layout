@@ -23,7 +23,7 @@ namespace Module03Layout
                 "Item 3"
                 // Add more items as needed
             };
-            itemsListView.ItemsSource = items;Z
+            itemsListView.ItemsSource = items;
         }
 
         // Handle submit button click for user input form

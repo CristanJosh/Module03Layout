@@ -8,10 +8,15 @@
     <ContentPage Title="List">
         <StackLayout>
             <ListView x:Name="itemListView">
-                <!-- List items will be populated dynamically -->
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding .}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
     </ContentPage>
+
 
     <!-- Tab 2 -->
     <ContentPage Title="Form">
@@ -26,7 +31,20 @@
     <!-- Tab 3 -->
     <ContentPage Title="Grid">
         <Grid>
-            <!-- Add grid elements here -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Example elements -->
+            <Label Text="Row 0, Column 0" Grid.Row="0" Grid.Column="0" />
+            <Label Text="Row 0, Column 1" Grid.Row="0" Grid.Column="1" />
+            <Label Text="Row 1, Column 0" Grid.Row="1" Grid.Column="0" />
+            <Label Text="Row 1, Column 1" Grid.Row="1" Grid.Column="1" />
         </Grid>
     </ContentPage>
 

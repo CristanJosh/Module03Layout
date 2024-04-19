@@ -15,6 +15,15 @@ namespace Module03Layout
         public TabbedPage1()
         {
             InitializeComponent();
+            PopulateListView();
+        }
+        private void PopulateListView()
+        {
+            // Sample data
+            List<string> items = new List<string> { "Item 1", "Item 2", "Item 3" };
+
+            // Set the ItemsSource
+            itemListView.ItemsSource = items;
         }
 
         // Handle submit button click for user input form
