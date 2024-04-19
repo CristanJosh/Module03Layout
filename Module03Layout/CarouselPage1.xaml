@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="Module03Layout.CarouselPage1"
+              Title="Cristan Josh S. Nuguid">
+
+    <!-- Page 1 -->
+    <ContentPage Title="Page 1">
+        <StackLayout>
+            <Image Source="logo_nugs.png" Aspect="AspectFit" />
+            <Label Text="Some text here" />
+        </StackLayout>
+    </ContentPage>
+
+    <!-- Page 2 -->
+    <ContentPage Title="Page 2">
+        <ListView x:Name="itemsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage>
+
+    <!-- Page 3 -->
+    <ContentPage Title="Page 3">
+        <StackLayout>
+            <Entry Placeholder="Name" x:Name="nameEntry" />
+            <Entry Placeholder="Email" x:Name="emailEntry" />
+            <!-- Add more entry fields as needed -->
+            <Button Text="Submit" Clicked="OnSubmitClicked" />
+        </StackLayout>
+    </ContentPage>
+
+</CarouselPage>

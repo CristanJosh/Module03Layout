@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module03Layout.RelativeLayoutPage">
+
+    <RelativeLayout>
+
+        <Image Source="bgimage2.JPG"
+               x:Name="myBackground"
+                Aspect="Fill"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=2}"/>
+
+
+        <Image Source="logo_nugs.png"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.5}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height, Factor=0.3}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.25}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.10}"/>
+
+
+        <Entry Placeholder="Username"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.3}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.35}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.8}"/>
+
+        <Entry Placeholder="Password"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.3}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.35}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.9}"/>
+
+        <Button Text="Login"
+                FontAttributes="Bold"
+                BackgroundColor="#E1AFD1"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.3}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.35}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=1.1}"/>
+
+
+
+    </RelativeLayout>
+
+</ContentPage>

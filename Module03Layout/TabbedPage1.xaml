@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Module03Layout.TabbedPage1"
+            Title="Cristan Josh S. Nuguid">
+
+    <!-- Tab 1 -->
+    <ContentPage Title="List">
+        <StackLayout>
+            <ListView x:Name="itemListView">
+                <!-- List items will be populated dynamically -->
+            </ListView>
+        </StackLayout>
+    </ContentPage>
+
+    <!-- Tab 2 -->
+    <ContentPage Title="Form">
+        <StackLayout>
+            <Entry Placeholder="Name" x:Name="nameEntry" />
+            <Entry Placeholder="Email" x:Name="emailEntry" />
+            <!-- Add more entry fields as needed -->
+            <Button Text="Submit" Clicked="OnSubmitClicked" />
+        </StackLayout>
+    </ContentPage>
+
+    <!-- Tab 3 -->
+    <ContentPage Title="Grid">
+        <Grid>
+            <!-- Add grid elements here -->
+        </Grid>
+    </ContentPage>
+
+</TabbedPage>
